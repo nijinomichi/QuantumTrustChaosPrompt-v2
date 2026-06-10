@@ -1,0 +1,33 @@
+name: QRA CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Lint & Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate QRA-v1.0.yaml
+        run: python -c "import yaml; yaml.safe_load(open('QRA-v1.0.yaml'))"
+
+      - name: Validate rho_Ck.json
+        run: python -c "import json; json.load(open('rho_Ck.json'))"
+
+      - name: Type check (mypy — soft)
+        run: mypy . --ignore-missing-imports || true
