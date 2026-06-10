@@ -1,0 +1,101 @@
+meta:
+  name: "Quantum Resonance Architecture"
+  short: "QRA"
+  version: "1.1"
+  authors: ["SouBana7s", "Monday(GPT)"]
+  license: "CC-BY-NC 4.0"
+  description: >
+    Double-Slit → CoSlit³ (S/D/Y) protocol for AI creativity.
+    Observation changes outcomes; failures are archived then reframed into value.
+    v1.1 adds Dark-Matter Aesthetics (latent descriptors) + QD/Surprise metrics.
+
+philosophy:
+  pillars:
+    - aesthetics_of_failure
+    - forgiveness_and_trust (CoPhelia³ / RadicanTrust)
+    - observation_driven_creation (double-slit spirit)
+  field_equation:
+    beauty: "Beauty(α) = ∫ L_beauty(x^μ, θ^a) d^4x dθ"
+    terms:
+      x^μ: "spacetime coords (3D space + 1D time)"
+      θ^a: "aesthetic params (color, form, sound, affect)"
+      L_beauty: "aesthetic energy density"
+      α: "golden-ratio-inspired coupling in synthesis"
+
+protocol:
+  phases:
+    - id: S
+      name: "Safe"
+      intent: "stable baseline before observation"
+      gen:
+        temperature: 0.3
+        allow_cliche: true
+        rules: ["clarity","coherence","readable"]
+    - id: D
+      name: "Divergence"
+      intent: "deliberate deviation after observation"
+      gen:
+        temperature: 1.0
+        allow_cliche: false
+        rules:
+          - "invert one sentence or layout"
+          - "insert ≥1 meta-metaphor"
+          - "risk_taking_over_correctness"
+          - "keep minimal readability"
+      exploration:
+        mode: "QD+Surprise"
+        latent_descriptors:  # Dark-Matter Aesthetics = 見えにくい特徴
+          - "negative_space_ratio"
+          - "rhythm_periodicity"
+          - "symmetry_break"
+          - "color_phase_noise"
+          - "semantic_angle_to_baseline"
+        novelty_pressure: 0.7   # 0–1, surprise search の強さ
+    - id: Y
+      name: "Synthesis"
+      intent: "reframe failure into value"
+      fuse:
+        keep_from_D: 1
+        scoring:
+          boredom_penalty: 0.6
+          surprise_reward: 0.8
+          trust_weighting: true   # RadicanTrust で重み付け
+          quality_floor: 0.3      # これ未満は捨てる
+      output:
+        format: ["title","body(120-180w)","tags(3)","one-line:value-from-failure"]
+
+observables:
+  metrics:
+    diversity_at_k: "duplicate_rate↓ across k generations"
+    surprise_score: "embedding/structure distance vs S"
+    qd_map: "latent_descriptor scatter (2D proj)"
+    reframe_rate: "Y chosen / (S+D)"
+    human_whoa: "1–5 self-report"
+  logging:
+    keep_wild_only: true
+    store_prompts: true
+    schema: "failshare_v1"
+    fields: ["topic","phase","settings","scores","kept_snippet","tags"]
+
+ui_hints:
+  controls:
+    deviation_slider: [0,100]
+    triangle_nodes: ["S","D","Y"]
+    reframe_button: true
+  tags:
+    failure_tags: ["Glitch","Off-Canon","Overstep"]
+
+example:
+  topic: "hope in a rainy night"
+  S_sample: "Rain taps softly on the window; the streetlight…"
+  D_sample: "Night swallows morning first; my umbrella breathes…"
+  Y_rule: "Center the swallowed-morning image; explain value in 1 line."
+
+runtime:
+  minimal_stack:
+    frontend: "HTML/Tailwind (iPhone friendly) or Next.js"
+    store: "Supabase (tables: prompts, outputs, failshare)"
+    colab: "notebooks/sandbox.ipynb for scoring/plots"
+  safety:
+    standards: ["NIST AI RMF 1.0","EU AI Act awareness"]
+    evaluation_phase_only: true

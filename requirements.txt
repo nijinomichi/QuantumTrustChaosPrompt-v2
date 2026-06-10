@@ -1,0 +1,9 @@
+# QRA v1.1 minimal_stack — scoring / plots (Colab-compatible)
+# fastapi and httpx deferred to API/runtime phase (G6 scope)
+pyyaml>=6.0
+numpy>=1.26
+pandas>=2.2
+matplotlib>=3.8
+scikit-learn>=1.4
+pytest>=8.2
+mypy>=1.10
