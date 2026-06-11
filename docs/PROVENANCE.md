@@ -1,75 +1,79 @@
-# Provenance — QuantumTrustChaosPrompt-v2
+# PROVENANCE: QuantumTrustChaosPrompt-v2
 
-## Why This Repository Exists
+## Origin
 
-This repository (`nijinomichi/QuantumTrustChaosPrompt-v2`) is a clean successor
-to `nijinomichi/QuantumTrustChaosPrompt`, which is preserved as
-**archaeological evidence** and must not be force-pushed or modified.
+This repository is a **clean successor** to `nijinomichi/QuantumTrustChaosPrompt`.
 
-The original repository contains an abnormal Git object whose path name encodes
-an entire BananaMoon NFT caption as a nested directory structure
-(Git tree SHA: `1b866408997e04d77c4d00416944d3a040346047`).
-This path exceeds the Linux 255-byte filename limit and permanently blocks
-`actions/checkout@v4` with:
+- **Source repository:** https://github.com/nijinomichi/QuantumTrustChaosPrompt
+- **Source HEAD at migration:** `a092d5755f8a6edb407040a787ec263bb940995b`
+- **Migration decision date:** 2026-06-10 JST
+- **Migration execution date:** pending first commit
+- **Migration type:** Curated file-by-file copy (no git history transfer)
+
+The original repository is preserved as **archaeological evidence** and must not be
+edited, force-pushed, or deleted.
+
+---
+
+## Why a clean successor?
+
+The original repository contains a directory whose name is the full text of a
+BananaMoon NFT caption. This path exceeds the Linux 255-byte filename limit and
+causes `actions/checkout@v4` to fail with:
 
 ```
-error: unable to create file # 🍌🌛 BananaMoon Quantum NFT 🌛🍌 ... : File name too long
+fatal: cannot create directory: File name too long
 ```
 
-## Source Repository
+Git tree SHA of the abnormal object:
+`1b866408997e04d77c4d00416944d3a040346047`
 
-| Item | Value |
-|------|-------|
-| Source repo | `nijinomichi/QuantumTrustChaosPrompt` |
-| Source ref (HEAD at migration) | `a092d5755f8a6edb407040a787ec263bb940995b` |
-| G2 CI commit | `f704b7dadc10f9eb4b4c43eb414699543d036ed0` |
-| G2 archive commit | `7c5950d3db30734c5f8d6743f13e570f2cb39d31` |
-| Abnormal path tree SHA | `1b866408997e04d77c4d00416944d3a040346047` |
-| Migration date | 2026-06-10 JST |
+G2 archive commit (text content preserved in normal filename):
+`7c5950d3db30734c5f8d6743f13e570f2cb39d31`
 
-## Archaeological Preservation Policy
+---
 
-- The original repository is **read-only**. No force-push. No `git filter-repo`.
-- G1 repair: `nijinomichi/-QACC-IYQ2025-` — `verified_completed`
-- G2 status on original: `implemented_but_blocked` (permanent, by design)
-- This v2 repository is where CI verification proceeds from Phase 4 onward.
-
-## What Was Migrated (Phase 3 — Initial Commit)
+## What was migrated (Phase 3)
 
 | File | Source SHA | Action |
 |------|-----------|--------|
-| `LICENSE` | `f78ce1e9555596af29a8068cdb01b64459746e5a` | copied verbatim |
-| `QRA-v1.0.yaml` | `bf00e173cb33c8ce39c36b8f620129628b80e2b4` | copied verbatim |
-| `rho_Ck.json` | `94888d66fca24e39e92cd482044882b1751bae89` | copied verbatim |
-| `requirements.txt` | `88f291d7362d26f9534905045212dee92532a8c6` | copied verbatim |
-| `docs/archive/banana-moon-nft-caption.md` | `283c4f6700ea94fa9e81b3cbcf5428185bff180d` | copied verbatim |
-| `docs/PROVENANCE.md` | *(this file)* | new — created for v2 |
-| `README.md` | *(rewritten for v2)* | rewritten clean successor version |
+| `LICENSE` | `f78ce1e9` | copy verbatim |
+| `QRA-v1.0.yaml` | `bf00e173` | copy verbatim |
+| `rho_Ck.json` | `94888d66` | copy verbatim |
+| `requirements.txt` | `88f291d7` | copy verbatim |
+| `docs/archive/banana-moon-nft-caption.md` | `283c4f67` | copy verbatim |
+| `docs/PROVENANCE.md` | — | new file (this document) |
+| `README.md` | `260fb029` (original) | rewritten for v2 |
 
-## What Was Intentionally Excluded
+---
 
-| File | Reason | Deferred To |
-|------|--------|-------------|
-| `.github/workflows/ci.yml` | Phase separation: CI introduced in Phase 4 only | Phase 4 |
-| `NFT` | Content not yet reviewed | Phase 3 extended |
-| `QuantumArt_News` | Content not yet reviewed | Phase 3 extended |
-| `notebooks/sandbox.ipynb` | Empty placeholder (1 B); Supabase/Colab scope | Phase 6 (G6) |
-| Abnormal long-path directory | Root cause of CI blocker; never to be imported | permanent exclude |
+## What was intentionally excluded
 
-## BananaMoon Provenance Chain
+| Path | Reason | Status |
+|------|--------|--------|
+| Abnormal long-path directory (`# 🍌🌛 BananaMoon...`) | Root cause of checkout failure — Linux 255-byte limit exceeded | permanent exclude |
+| `.github/workflows/ci.yml` | Deferred to Phase 4 (separate commit) | deferred |
+| `NFT` | Content review pending | deferred |
+| `QuantumArt_News` | Content review pending | deferred |
+| `notebooks/sandbox.ipynb` | Empty placeholder (1 B); no migration value | excluded |
 
-The BananaMoon NFT caption text, originally embedded as an abnormal directory
-path, has been recovered and preserved at:
+---
 
-`docs/archive/banana-moon-nft-caption.md`
-(SHA: `283c4f6700ea94fa9e81b3cbcf5428185bff180d`)
+## BananaMoon NFT Content Preservation
 
-The caption evidence is preserved here for archaeological continuity.
-For authoritative NFT metadata including CID and on-chain references,
-refer to the G5 Closure record in the BananaMoon / QuantumTrust Space.
+The text content of the abnormal-path directory has been preserved at:
+`docs/archive/banana-moon-nft-caption.md` (SHA: `283c4f6700ea94fa9e81b3cbcf5428185bff180d`)
 
-## Continuity
+This file carries the provenance chain of the BananaMoon NFT concept into v2
+without re-introducing the path length problem.
 
-Git history is **not** carried over from the source repository.
-Provenance is maintained exclusively via this document and the permanent
-link to the archaeological source repository above.
+---
+
+## Phase roadmap
+
+| Phase | Scope | Status |
+|-------|-------|--------|
+| Phase 3 | Clean repo migration (core files) | ← this commit |
+| Phase 4 | CI workflow (`.github/workflows/ci.yml`) | next |
+| Phase 5 | NFT / QuantumArt_News (after content review) | pending |
+| Phase 6 | Supabase / Colab runtime (`notebooks/`) | future |
