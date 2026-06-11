@@ -7,7 +7,7 @@ This repository is a **clean successor** to `nijinomichi/QuantumTrustChaosPrompt
 - **Source repository:** https://github.com/nijinomichi/QuantumTrustChaosPrompt
 - **Source HEAD at migration:** `a092d5755f8a6edb407040a787ec263bb940995b`
 - **Migration decision date:** 2026-06-10 JST
-- **Migration execution date:** pending first commit
+- **Migration execution date:** 2026-06-11 JST — commit `026511f93346e202aa3cc7be6119bd3e67b69ebd`
 - **Migration type:** Curated file-by-file copy (no git history transfer)
 
 The original repository is preserved as **archaeological evidence** and must not be
@@ -73,7 +73,7 @@ without re-introducing the path length problem.
 
 | Phase | Scope | Status |
 |-------|-------|--------|
-| Phase 3 | Clean repo migration (core files) | ← this commit |
+| Phase 3 | Clean repo migration (core files) | completed — `026511f9` |
 | Phase 4 | CI workflow (`.github/workflows/ci.yml`) | next |
 | Phase 5 | NFT / QuantumArt_News (after content review) | pending |
 | Phase 6 | Supabase / Colab runtime (`notebooks/`) | future |
